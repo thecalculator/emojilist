@@ -9,19 +9,25 @@
 import UIKit
 
 class DefinationViewController: UIViewController {
-
-    @IBOutlet weak var emojifrompage1: UILabel!
-    var emoji = "nothing"
     
+    @IBOutlet weak var emojifrompage1: UILabel!
+    var emoji = Emoji()
+    
+    @IBOutlet weak var desclabel: UILabel!
+    
+    @IBOutlet weak var catlable: UILabel!
+    @IBOutlet weak var yearlable: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        emojifrompage1.text = emoji
+       
+        emojifrompage1.text = emoji.emo
+        desclabel.text = emoji.defination
+        catlable.text = emoji.category
+        yearlable.text = String(emoji.year)
         
-        
-        // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -31,15 +37,15 @@ class DefinationViewController: UIViewController {
     
     
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
